@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certyficate
+metadata:
+  name: fib-stolarski-it-tls
+spec:
+  secretName: fib-stolarski-it-tls
+  issuerRef: 
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: fib.stolarski.it
+  dnsNames:
+    - fib.stolarski.it
+    - www.fib.stolarski.it
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - fib.stolarski.it
+          - www.fib.stolarski.it
