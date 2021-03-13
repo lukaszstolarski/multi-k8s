@@ -1,6 +1,6 @@
-docker build -t lukaszstolarski/multi-client:latest -t lukaszstolarski/multi-client:$SHA -f ./client/Dcokerfile ./client
-docker build -t lukaszstolarski/multi-server:latest -t lukaszstolarski/multi-server:$SHA -f ./server/Dcokerfile ./server
-docker build -t lukaszstolarski/multi-worker:latest -t lukaszstolarski/multi-worker:$SHA -f ./worker/Dcokerfile ./worker
+docker build -t lukaszstolarski/multi-client:latest -t lukaszstolarski/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t lukaszstolarski/multi-server:latest -t lukaszstolarski/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t lukaszstolarski/multi-worker:latest -t lukaszstolarski/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 docker push lukaszstolarski/multi-client:latest
 docker push lukaszstolarski/multi-server:latest
 docker push lukaszstolarski/multi-worker:latest
